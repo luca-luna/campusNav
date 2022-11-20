@@ -1,0 +1,78 @@
+/* Source: https://color.adobe.com/explore?page=1 */
+
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #0D2E41; }
+.My-Color-Theme-2-hex { color: #007A8A; }
+.My-Color-Theme-3-hex { color: #46AE9F; }
+.My-Color-Theme-4-hex { color: #F8AF2C; }
+.My-Color-Theme-5-hex { color: #FB6137; }
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba { color: rgba(13, 46, 65, 1); }
+.My-Color-Theme-2-rgba { color: rgba(0, 122, 138, 1); }
+.My-Color-Theme-3-rgba { color: rgba(70, 174, 159, 1); }
+.My-Color-Theme-4-rgba { color: rgba(248, 175, 44, 1); }
+.My-Color-Theme-5-rgba { color: rgba(251, 97, 55, 1); }
+
+/* Color Theme Swatches in HSLA */
+.My-Color-Theme-1-hsla { color: hsla(201, 66, 15, 1); }
+.My-Color-Theme-2-hsla { color: hsla(186, 100, 27, 1); }
+.My-Color-Theme-3-hsla { color: hsla(171, 42, 47, 1); }
+.My-Color-Theme-4-hsla { color: hsla(38, 93, 57, 1); }
+.My-Color-Theme-5-hsla { color: hsla(12, 96, 60, 1); }
+
+body {
+    background-color: #0D2E41;
+    color: #000000;
+}
+
+h1{
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  color: white;
+}
+
+p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    border: none;
+}
+
+label{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    border: none;
+}
+
+button{
+    background-color:rgba(70, 174, 159, 1);
+    border-radius: 3px 3px 3px 3px;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color:rgba(50, 150, 130, 1);
+}
+
+button:active{
+    background-color:rgba(40, 140, 120, 1);
+}
+
+input{
+    border-radius: 3px 3px 3px 3px;
+    border-color: #202020;
+}
+
+input:hover{
+    background-color:rgb(250, 250, 250);
+    border-radius: 3px 3px 3px 3px;
+    border-color: #202020;
+}
+
+.images {
+    width: 500px;
+}
+
+
