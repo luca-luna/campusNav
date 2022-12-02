@@ -8,6 +8,8 @@
 		 <link rel="preconnect" href="https://fonts.googleapis.com">
 		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		 <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+		 <script src="{{url_for('static', filename='js/jquery-3.1.1.min.js')}}"></script>
+		 <script src="{{url_for('static', filename='js/index.js')}}"></script>
 	</head>
 		<body>
 		<!--Bootstrap Nav-->
@@ -15,11 +17,12 @@
 		<div class="card map mx-auto">
 			<div class="card-header">
 				University at Buffalo, North Campus
-			  </div>
+			</div>
 			<div class="card-body">
 				<h2> map can go</h2>
 				<h2> in this card</h2>
-				<img src="{{url_for('static', filename='campusNavMap.svg')}}" align="middle" />
+				  <object id='map' data='static/campusNavMap.svg' width='100%' height='100%'></object>
+				<!--<img src="{{url_for('static', filename='campusNavMap.svg')}}" align="middle" />-->
 
 			</div>
 		</div>
@@ -30,17 +33,19 @@
 			Select your starting location and desired destination with the below drop-down menus, then select the 'Begin Navigation' button.
 			<br><br>
 			<label for="start">Starting Location:</label>
-			<select name="start" id="start">
-				<option value="default">Select</option>
-				<option value="sample">Sample</option>
-				<option value="here">Here</option>
-			</select>
+			<select name="start" id="start" data="">
+				<option value="cook">Cook</option>
+				<option value="davis">Davis</option>
+				<option value="jacobs">Jacobs</option>
+				<option value="su">Student Union</option>
+			</Select>
 			<br>
 			<label for="end">Destination:</label>
-			<select name="end" id="end">
-				<option value="default">Select</option>
-				<option value="sample">Sample</option>
-				<option value="here">Here</option>
+			<select name="end" id="end" data="">
+				<option value="cook">Cook</option>
+				<option value="davis">Davis</option>
+				<option value="jacobs">Jacobs</option>
+				<option value="su">Student Union</option>
 			</select>
 			<br>
 			<button type="button" class="btn btn-success" onclick="alert('This button does nothing this is just to show that it is a button')">Begin Navigation </button>
