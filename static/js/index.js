@@ -22,15 +22,13 @@ $(document).ready(function() {
     cook.style.stroke = "black";
     
     $('select').on('change', function() {
-	    let building = svgDoc.getElementById(this.value);
-	    let previous = svgDoc.getElementById(this.data);
-	(this.id == "start") ? building.style.fill = "red" : building.style.fill = "green";
-	
-	if (previous != null) {
-	    previous.style.fill = "none";
-	}
+	let building = svgDoc.getElementById(this.value);
+	let previous = svgDoc.getElementById(this.data);
 
-	    this.data = this.value;
+	(this.id == "start") ? building.style.fill = "red" : building.style.fill = "green";
+	(previous != null) ? previous.style.fill = "none" : 1;
+
+	this.data = this.value;
     });
     
 });
