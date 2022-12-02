@@ -85,6 +85,7 @@ input:hover{
 .map{
     background-color: white;
     width: 90%;
+    height: 50%
     border-radius: 10px;
     margin: 30px;
     padding: 10 px;
