@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    let svg = document.getElementById('map');
-    console.log(svg);
-    
-    let svgDoc = svg.contentDocument;
+    var svg = document.getElementById('map');    
+    var svgDoc = svg.contentDocument;
 
     // color start and end buildings before route generation
     $('select').on('change', function() {
