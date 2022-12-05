@@ -79,13 +79,12 @@ input:hover{
 }
 
 .images {
-    width: 500px;
+    width: 50%;
 }
 
 .map{
     background-color: white;
-    width: 90%;
-    height: 20%
+    width: auto;
     border-radius: 10px;
     margin: 30px;
     padding: 10 px;
