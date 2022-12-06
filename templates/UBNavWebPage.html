@@ -11,13 +11,15 @@
 	</head>
 		<body>
 		<!--Bootstrap Nav-->
-		<h1>Welcome to UBNav</h1>
-		<div class="card map mx-auto">
-			<div class="card-header">
+		<div class="header">
+		<h1>CampusNav</h1>
+	</div>
+		<div class="card map mx-auto" style="width:50%">
+			<div class="card-header"> 
 				University at Buffalo, North Campus
 			</div>
 			<div class="card-body">
-				  <object id='map' data='static/campusNavMap.svg' width='50%' height='50%'></object>
+				  <object id='map' data='static/campusNavMap.svg' width='100%' height='100%'></object>
 				<!--<img src="{{url_for('static', filename='campusNavMap.svg')}}" align="middle" />-->
 
 			</div>
@@ -46,7 +48,9 @@
 				<option value="su">Student Union</option>
 			</select>
 			<br>
-			<button type="button" class="btn btn-success">Begin Navigation </button>
+			<div id="putBtnHere">
+			<button type="button" class="btn btn-success nav-btn">Begin Navigation </button>
+			</div>
 		</p>
 		</div>
 		</div>
