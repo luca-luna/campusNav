@@ -19,7 +19,7 @@
 			<div class="card-body">
 				<h2> map can go</h2>
 				<h2> in this card</h2>
-				  <object id='map' data='static/campusNavMap.svg' width='100%' height='100%'></object>
+				  <object id='map' data='static/campusNavMap1.svg' width='100%' height='100%'></object>
 				<!--<img src="{{url_for('static', filename='campusNavMap.svg')}}" align="middle" />-->
 
 			</div>
@@ -30,6 +30,15 @@
 		<p>
 			Select your starting location and desired destination with the below drop-down menus, then select the 'Begin Navigation' button.
 			<br><br>
+			<p>Please select your favorite Web language:</p>
+			<input type="radio" id="d" name="type" value="direct">
+			<label for="direct">Direct (non accessible)</label><br>
+			<input type="radio" id="accessible-e" name="type" value="a-e">
+			<label for="accessible-e">Accessible by Elevator</label><br>
+			<input type="radio" id="accessible-o" name="type" value="accessible-o">
+			<label for="accessible-o">Accessible Outside</label>
+
+			<br> 
 			<label for="start">Starting Location:</label>
 			<select name="start" id="start" data="">
 			        <option value="">--Please choose an option--</option>

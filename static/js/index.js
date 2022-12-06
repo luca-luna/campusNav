@@ -16,13 +16,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	//generate route
 	$('.btn').click(function() {
-
 	    try {	
 		let start = $('#start').val();
 		let end = $('#end').val();
+		var type = "";
 
-		let path = svgDoc.getElementById(`${start[0]}-${end[0]}`);
-		(path == null) ? path = svgDoc.getElementById(`${end[0]}-${start[0]}`) : 1;
+		if ($('input[name=type]:checked').val() == "direct") {
+		    type = "-d";
+		}
+		else if ($('input[name=type]:checked').val() == "accessible-o") {
+		    type = "";
+		}
+		else if ($('input[name=type]:checked').val() == "accessible-e") {
+		    type = "-e";
+		}
+		
+		var path = svgDoc.getElementById(`${start[0]}-${end[0]}${type}`);
+		console.log(path);
+
+		(path == null) ? path = svgDoc.getElementById(`${end[0]}-${start[0]}${type}`) : 1;
 		(path != null) ? path.style.opacity = 1 : 1;
 
 		// color start and end buildings after route generation
@@ -31,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		$('select').on('change', function() {
 		    (path != null) ? path.style.opacity = 0 : 1;
-		    
+			
 		    let building = svgDoc.getElementById(this.value);
 		    let previous = svgDoc.getElementById(this.data);
 		    previous.style.fill = "none";
@@ -39,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		    this.data = this.value;
 		});
+
+		$('input[name=type]').on('change', function() {
+		    console.log(path);
+		    (path != null) ? path.style.opacity = 0 : 1;
+		});
+
+		$
 
 	    }
 	    catch {
