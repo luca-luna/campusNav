@@ -35,6 +35,14 @@
 		<p>
 			Select your starting location and desired destination with the below drop-down menus, then select the 'Begin Navigation' button.
 			<br><br>
+			<p>Please the type of path:</p>
+			<input type="radio" id="d" name="type" value="direct">
+			<label for="direct">Direct (non accessible)</label><br>
+			<input type="radio" id="accessible-e" name="type" value="a-e">
+			<label for="accessible-e">Accessible by Elevator</label><br>
+			<input type="radio" id="accessible-o" name="type" value="accessible-o">
+			<label for="accessible-o">Accessible Outside</label>
+			<br> 
 			<label for="start">Starting Location:</label>
 			<select name="start" id="start" data="">
 			        <option value="">--Please choose an option--</option>
