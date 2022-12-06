@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	var svg = document.getElementById('map');    
 	var svgDoc = svg.contentDocument;
 
+	document.getElementById("start-travel").style.visibility="hidden";
+	document.getElementById("gps").style.visibility="hidden";
+
+	
 	// color start and end buildings before route generation
 	$('select').on('change', function() {
 	    let new_building = svgDoc.getElementById(this.value);
@@ -12,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	    (previous != null) ? previous.style.fill = "none" : 1;
 
 	    this.data = this.value;
+
+		document.getElementById("start-travel").style.visibility="hidden";
+
 	});
 
 	//generate route
@@ -29,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		svgDoc.getElementById(start).style.fill = "rgba(220, 53, 69, 0.5)";
 		svgDoc.getElementById(end).style.fill = "rgba(25, 135, 84, 0.5)";
 
-		document.getElementById("putBtnHere").innerHTML = '<button type="button" class="btn btn-success start-travel">Start Travel</button>'
+		document.getElementById("start-travel").style.visibility="visible";
 
 		$('select').on('change', function() {
 		    (path != null) ? path.style.opacity = 0 : 1;
@@ -41,8 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		    this.data = this.value;
 
-			document.getElementById("putBtnHere").innerHTML = '<button type="button" class="btn btn-success nav-btn">Begin Navigation </button>'
-			
+			document.getElementById("start-travel").style.visibility="hidden";
 
 		});
 
@@ -52,6 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	    }
 	    
 	});
+
+	$('.start-travel').click(function() {
+		document.getElementById("gps").style.visibility="visible";
+	})
 	
     });
 });
+
+
+
+

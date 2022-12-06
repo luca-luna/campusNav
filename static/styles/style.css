@@ -57,6 +57,11 @@ button{
     border: none;
 }
 
+#gps{
+    z-index:-1;
+    position:relative;
+}
+
 
 button:hover{
     background-color:rgba(50, 150, 130, 1);
