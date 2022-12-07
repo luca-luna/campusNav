@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function() {
-	var svg = document.getElementById('map');    
+	var svg = document.getElementById('map');
+	addEventListener("load", (event) => {
+	    console.log("svg loaded");
+	
 	var svgDoc = svg.contentDocument;
 
 	document.getElementById("start-travel").style.visibility="hidden";
@@ -76,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	$('.start-travel').click(function() {
 		document.getElementById("gps").style.visibility="visible";
-	})
+	});
+	});
 	
     });
 });

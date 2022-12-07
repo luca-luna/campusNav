@@ -31,15 +31,19 @@
 		</div>
 
 		<div class="card main-panel mx-auto">
-		<div class="card-body">
-		<p>
+		  <div class="card-body">
+		    <div>
+		      <button id="help" type="button" class="btn btn-info float-right pull-right">Help</button>
+		    </div>
+		    <br><br>
+		    <p>
 			Select your starting location and desired destination with the below drop-down menus, then select the 'Begin Navigation' button.
 			<br><br>
-			<p>Please the type of path:</p>
+			<p>Please select the type of path:</p>
 			<input type="radio" id="d" name="type" value="direct">
-			<label for="direct">Direct (non accessible)</label><br>
-			<input type="radio" id="accessible-e" name="type" value="a-e">
-			<label for="accessible-e">Accessible by Elevator</label><br>
+			<label for="direct">Direct (on accessible)</label><br>
+			<!--<input type="radio" id="accessible-e" name="type" value="a-e">
+			<label for="accessible-e">Accessible by Elevator</label><br>-->
 			<input type="radio" id="accessible-o" name="type" value="accessible-o">
 			<label for="accessible-o">Accessible Outside</label>
 			<br> 
