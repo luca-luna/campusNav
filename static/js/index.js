@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function() {
+
+
+
+	/*$(function () {
+            $("#myModal").dialog({
+		modal: true,
+		autoOpen: false,
+		title: "jQuery Dialog",
+		width: 300,
+		height: 150
+            });
+            $("#help").click(function () {
+		$('#myModal').dialog('open');
+            });
+	});*/
+
+
+
+	
 	var svg = document.getElementById('map');
 	addEventListener("load", (event) => {
 	    console.log("svg loaded");
@@ -72,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	    }
 	    catch {
-		alert("Please select start and end locations");
+		alert("Please select start and end locations as well as path type");
 	    }
 	    
 	});
