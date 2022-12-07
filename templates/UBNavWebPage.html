@@ -30,14 +30,17 @@
 			</div>
 
 
-		<!--	<div class="modal fade" id="myModal" role="dialog">
+			<!--<div class="modal fade" id="myModal" role="dialog">
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <p> hi there </p>
 			    </div>
 			  </div>
-			</div>
-			-->
+			</div>-->
+
+			<div class="modal-body" id="dialg" title="How to use the map">"instructions"<br>"more instructions" </div>  
+			<button id="opener">Dialog Box</button> 
+		
 
 			
 		</div>
@@ -53,7 +56,7 @@
 			<br><br>
 			<p>Please select the type of path:</p>
 			<input type="radio" id="d" name="type" value="direct">
-			<label for="direct">Direct (on accessible)</label><br>
+			<label for="direct">Direct (non accessible)</label><br>
 			<!--<input type="radio" id="accessible-e" name="type" value="a-e">
 			<label for="accessible-e">Accessible by Elevator</label><br>-->
 			<input type="radio" id="accessible-o" name="type" value="accessible-o">
@@ -92,7 +95,16 @@
 		<script src="connect_websocket.js"></script>
 		
 		<!--<script src="{{url_for('static', filename='js/jquery-3.1.1.min.js')}}"></script>-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+		
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>-->
+
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+
+		
 		<script src="{{url_for('static', filename='js/index.js')}}"></script>
 	</body>
 </html>

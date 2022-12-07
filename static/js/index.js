@@ -1,21 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function() {
 
-
-
-	/*$(function () {
-            $("#myModal").dialog({
-		modal: true,
+	$(function() {  
+            $( "#dialg" ).dialog({  
 		autoOpen: false,
-		title: "jQuery Dialog",
-		width: 300,
-		height: 150
-            });
-            $("#help").click(function () {
-		$('#myModal').dialog('open');
-            });
-	});*/
+		draggable: true,
+            });  
+            $( "#opener" ).click(function() {  
+               $( "#dialg" ).dialog( "open" );  
+            });  
+         });  
 
+	
 
 
 	
