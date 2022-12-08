@@ -95,6 +95,8 @@ input:hover{
     margin: 30px;
     padding: 10 px;
     box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.249);
+    float: left;
+    display: inline
 }
 
 .main-panel{
@@ -105,5 +107,3 @@ input:hover{
     padding: 10px;
     box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.249);
 }
-
-

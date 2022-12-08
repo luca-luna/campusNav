@@ -92,9 +92,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	    
 	});
 
+	//DEFINE TEXT INSTUCTIONS HERE AS VARIABLES (e.g. Davis to SU is one variable)
 	$('.start-travel').click(function() {
-		document.getElementById("gps").style.visibility="visible";
+		const label = document.getElementById('directions');
+		label.textContent = 'Replacement label text';
+		console.log("DASDAS")
+		document.getElementById("gps").style.visibility="visible"; 	
 	});
+
+	
 	});
 	
     });
