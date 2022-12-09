@@ -88,37 +88,37 @@ document.addEventListener("DOMContentLoaded", function () {
 		case "d-s":
 		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall.Turn left and follow the sidewalk. Student Union should be right ahead.</p>");
 		    break;
-		case "d-j":
+		case "d-j-d":
 		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall. Go through the plaza and head up the stairs. Go between Baldy Hall and O'Brian Hall and you should see Jacobs Management Center across the street.</p>");
 		    break;
-		case "d-c":
+		case "d-c-d":
 		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall. Turn right and follow the sidewalk till you pass Capen Hall and see a staircase. Head up the stair case and turn right after passing the overhead. Cooke Hall is to your left. </p>");
 		    break;
-		case "j-c":
+		case "j-c-d":
 		    $("div.modal-body").html("<p>Exit Jacobs Management Center and cross the street. Turn to the left and walk straight past Capen Hall. Cooke Hall is to your left. </p>");
 		    break;
-		case "s-c":
+		case "s-c-d":
 		    $("div.modal-body").html("<p>Exit the Student Union on the second floor. You should see Lockwood Library and Baldy Hall in front of you. Turn left and head straight. Keep on the left and walk past Capen Hall. Cooke Hall should be on your left. </p>");
 		    break;
-		case "s-j":
+		case "s-j-d":
 		    $("div.modal-body").html("<p>Exit the Student Union on the second floor. You should see Lockwood Library and Baldy Hall in front of you.Turn right and head to Baldy Hall. Go between Baldy Hall and O'Brian Hall and you should see Jacobs Management Center across the street. </p>");
 		    break;
-		case "c-d":
+		case "c-d-d":
 		    $("div.modal-body").html("<p>Head toward Capen Hall and turn left between Talbert Hall and Capen Hall and go down the stairs. Turn right and follow the sidewalk till you see Bonner hall and cross the street . Davis Hall should be right ahead. </p>");
 		    break;
-		case "c-j":
+		case "c-j-d":
 		    $("div.modal-body").html("<p>Head toward Capen Hall and keep going straight to O'Brian Hall. Keep on the right side of the building. Cross the street and you should arrive at Jacobs Management Center. </p>");
 		    break;
-		case "c-s":
+		case "c-s-d":
 		    $("div.modal-body").html("<p>Head toward Capen Hall and keep going straight to O'Brian Hall. Keep on the left side of the building. Keep going straight and you should see the Student Union on your left. </p>");
 		    break;
-		case "j-d":
+		case "j-d-d":
 		    $("div.modal-body").html("<p>Exit Jacobs Management Center and cross the street. Go between Baldy Hall and O'Brian Hall and head down the stairs ahead. Go through the plaza and cross the street. Davis Hall should be right ahead. </p>");
 		    break;
-		case "s-d":
+		case "s-d-d":
 		    $("div.modal-body").html("<p>Exit the SU from the first floor. You should see The Commons in front of you. Turn left and follow the sidewalk till you reach Bonner Hall. Turn right and cross the street. Davis Hall should be right ahead. </p>");
 		    break;
-		case "j-s":
+		case "j-s-d":
 		    $("div.modal-body").html("<p>Exit Jacobs Management Center and cross the street. Go between Baldy Hall and O'Brian Hall. The Student Union is to your right. </p>");
 		    break;
 		default:
