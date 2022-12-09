@@ -235,6 +235,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	    $('select').on('change', function() {
 		synth.cancel();
+		document.getElementById("gps").style.visibility="hidden";
+		document.getElementById("start-travel").style.visibility="hidden";
 		document.getElementById("dirAlert").style.visibility="hidden";
 		document.getElementById("dirAlert").style.height=0;
 		document.getElementById("speak").style.visibility="hidden";
@@ -253,6 +255,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	    $('input[name=type]').on('change', function() {
 		synth.cancel();
+		document.getElementById("gps").style.visibility="hidden";
+		document.getElementById("start-travel").style.visibility="hidden";
 		document.getElementById("dirAlert").style.visibility="hidden";
 		document.getElementById("dirAlert").style.height=0;
 		document.getElementById("speak").style.visibility="hidden";
