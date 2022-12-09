@@ -231,7 +231,35 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		}
 		console.log("DASDAS")
-		document.getElementById("gps").style.visibility="visible"; 
+	    document.getElementById("gps").style.visibility="visible";
+
+	    $('select').on('change', function() {
+		synth.cancel();
+		document.getElementById("dirAlert").style.visibility="hidden";
+		document.getElementById("dirAlert").style.height=0;
+		document.getElementById("speak").style.visibility="hidden";
+		    (path != null) ? path.style.opacity = 0 : 1;
+		    
+		    let building = svgDoc.getElementById(this.value);
+		    let previous = svgDoc.getElementById(this.data);
+		    previous.style.fill = "none";
+		    (this.id == "start") ? building.style.fill = "rgba(220, 53, 69, 0.5)" : building.style.fill = "rgba(25, 135, 84, 0.5)";
+
+		    this.data = this.value;
+
+		    document.getElementById("start-travel").style.visibility="hidden";
+		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
+		});
+
+	    $('input[name=type]').on('change', function() {
+		synth.cancel();
+		document.getElementById("dirAlert").style.visibility="hidden";
+		document.getElementById("dirAlert").style.height=0;
+		document.getElementById("speak").style.visibility="hidden";
+		    console.log(path);
+		    (path != null) ? path.style.opacity = 0 : 1;
+		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
+		});
 	
     });
 });
