@@ -1,19 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function() {
-
+	
 	$(function() {  
-            $( "#dialg" ).dialog({  
+	    $( "#dialg" ).dialog({  
 		autoOpen: false,
 		draggable: true,
-            });  
-            $( "#opener" ).click(function() {  
-               $( "#dialg" ).dialog( "open" );  
-            });  
-         });  
-
-	
-
-
+	    });  
+	    $( "#opener" ).click(function() {  
+		$( "#dialg" ).dialog( "open" );  
+	    });  
+	});
 	
 	var svg = document.getElementById('map');
 	addEventListener("load", (event) => {
@@ -56,9 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		    type = "-e";
 		}
 
+		var path_id = "";
 		var path = svgDoc.getElementById(`${start[0]}-${end[0]}${type}`);
 		console.log(path);
-		(path == null) ? path = svgDoc.getElementById(`${end[0]}-${start[0]}${type}`) : 1;
+		(path == null) ? (path = svgDoc.getElementById(`${end[0]}-${start[0]}${type}`), path_id = `${end[0]}-${start[0]}${type}`) : path_id = `${start[0]}-${end[0]}${type}`;
 		(path != null) ? path.style.opacity = 1 : 1;
 
 		// color start and end buildings after route generation
@@ -77,13 +74,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		    this.data = this.value;
 
-			document.getElementById("start-travel").style.visibility="hidden";
+		    document.getElementById("start-travel").style.visibility="hidden";
+		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
 		});
 
 		$('input[name=type]').on('change', function() {
 		    console.log(path);
 		    (path != null) ? path.style.opacity = 0 : 1;
+		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
 		});
+
+		switch (path_id) {
+		case "d-s":
+		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall.Turn left and follow the sidewalk. Student Union should be right ahead.</p>");
+		    break;
+		case "d-j":
+		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall. Go through the plaza and head up the stairs. Go between Baldy Hall and O'Brian Hall and you should see Jacobs Management Center across the street.</p>");
+		    break;
+		case "d-c":
+		    $("div.modal-body").html("<p>Exit the building and cross the street toward Bonner Hall. Turn right and follow the sidewalk till you pass Capen Hall and see a staircase. Head up the stair case and turn right after passing the overhead. Cooke Hall is to your left. </p>");
+		    break;
+		case "j-c":
+		    $("div.modal-body").html("<p>Exit Jacobs Management Center and cross the street. Turn to the left and walk straight past Capen Hall. Cooke Hall is to your left. </p>");
+		    break;
+		case "s-c":
+		    $("div.modal-body").html("<p>Exit the Student Union on the second floor. You should see Lockwood Library and Baldy Hall in front of you. Turn left and head straight. Keep on the left and walk past Capen Hall. Cooke Hall should be on your left. </p>");
+		    break;
+		case "s-j":
+		    $("div.modal-body").html("<p>Exit the Student Union on the second floor. You should see Lockwood Library and Baldy Hall in front of you.Turn right and head to Baldy Hall. Go between Baldy Hall and O'Brian Hall and you should see Jacobs Management Center across the street. </p>");
+		break;
+		default:
+		    $("div.modal-body").html("not found");
+		    break;
+			
+		};
 
 	    }
 	    catch {
