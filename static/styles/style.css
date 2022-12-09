@@ -97,6 +97,15 @@ input:hover{
     box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.249);
 }
 
+#dirAlert{
+    width: 50%;
+    border-radius: 10px;
+    margin: 30px;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: -2px 3px 9px rgba(0, 0, 0, 0.249);
+}
+
 .main-panel{
     background-color: white;
     width: 70%;
