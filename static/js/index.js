@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		    type = "-e";
 		}
 
-		var path_id = "";
+		var path_id = `${start[0]}-${end[0]}${type}`;
 		var path = svgDoc.getElementById(`${start[0]}-${end[0]}${type}`);
 		console.log(path);
-		(path == null) ? (path = svgDoc.getElementById(`${end[0]}-${start[0]}${type}`), path_id = `${end[0]}-${start[0]}${type}`) : path_id = `${start[0]}-${end[0]}${type}`;
+		(path == null) ? (path = svgDoc.getElementById(`${end[0]}-${start[0]}${type}`) : 1;
 		(path != null) ? path.style.opacity = 1 : 1;
 
 		// color start and end buildings after route generation
