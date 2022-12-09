@@ -249,7 +249,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		    this.data = this.value;
 
 		    document.getElementById("start-travel").style.visibility="hidden";
-		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
 		});
 
 	    $('input[name=type]').on('change', function() {
@@ -261,7 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("speak").style.visibility="hidden";
 		    console.log(path);
 		    (path != null) ? path.style.opacity = 0 : 1;
-		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
 		});
 	
     });
