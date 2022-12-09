@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		$('input[name=type]').on('change', function() {
 		    console.log(path);
 		    (path != null) ? path.style.opacity = 0 : 1;
-		    $("div.modal-body").html("<p>Use this help button to get text instructions once you have generated a path!</p>");
 		});
 
 	    }
